@@ -13,7 +13,7 @@ pub fn id<T>(x: T) -> T {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::compose::compose;
+    use crate::composition::compose;
     
     #[test]
     fn test_identity_preserves_value() {

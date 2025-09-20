@@ -1,5 +1,5 @@
 mod identity;
-mod compose;
+mod composition;
 
 fn main() {
     println!("Category Theory in Rust");
