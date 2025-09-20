@@ -10,19 +10,10 @@ pub fn id<T>(x: T) -> T {
     x
 }
 
-/// Compose two functions (for demonstrating category theory laws)
-/// Composes functions g ∘ f, creating a new function that applies f then g
-pub fn compose<A, B, C, F, G>(f: F, g: G) -> impl Fn(A) -> C
-where
-    F: Fn(A) -> B,
-    G: Fn(B) -> C,
-{
-    move |x| g(f(x))
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::composition::compose;
     
     #[test]
     fn test_identity_preserves_value() {
